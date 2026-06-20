@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>德州扑克 · 信息整理 & 资料索引</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #fafaf9;
+            color: #1f1f1f;
+            font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.7;
+            padding: 2rem 1rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .page {
+            max-width: 680px;
+            width: 100%;
+        }
+
+        .hero {
+            margin: 2.5rem 0 3rem 0;
+        }
+
+        .hero p:first-child {
+            font-size: 1.15rem;
+            color: #5b5b5b;
+            letter-spacing: 0.02em;
+            margin-bottom: 0.25rem;
+        }
+
+        .hero h1 {
+            font-size: 2.3rem;
+            font-weight: 600;
+            line-height: 1.2;
+            letter-spacing: -0.01em;
+            color: #111;
+            margin-top: 0.1rem;
+        }
+
+        .hero .sub {
+            font-size: 1rem;
+            color: #6e6e6e;
+            margin-top: 0.75rem;
+            border-left: 3px solid #cfc7bf;
+            padding-left: 1rem;
+        }
+
+        section {
+            margin: 2.8rem 0;
+        }
+
+        h2 {
+            font-size: 1.5rem;
+            font-weight: 500;
+            letter-spacing: -0.01em;
+            margin-bottom: 1rem;
+            border-bottom: 1px solid #e5ddd5;
+            padding-bottom: 0.3rem;
+            color: #1a1a1a;
+        }
+
+        h3 {
+            font-size: 1.1rem;
+            font-weight: 450;
+            margin: 1.2rem 0 0.5rem 0;
+            color: #2e2e2e;
+        }
+
+        p {
+            margin: 0.85rem 0;
+            color: #2c2c2c;
+        }
+
+        ul {
+            list-style: none;
+            margin: 1.2rem 0;
+        }
+
+        li {
+            padding: 0.35rem 0 0.35rem 1.6rem;
+            position: relative;
+        }
+
+        li::before {
+            content: "—";
+            position: absolute;
+            left: 0;
+            color: #b7a99e;
+        }
+
+        .card-slim {
+            background: #ffffff;
+            border: 1px solid #eae5df;
+            border-radius: 8px;
+            padding: 1.5rem 1.8rem;
+            margin: 1.8rem 0;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.02);
+        }
+
+        .card-slim p:first-child {
+            margin-top: 0;
+        }
+
+        .card-slim p:last-child {
+            margin-bottom: 0;
+        }
+
+        .note {
+            color: #6a6a6a;
+            font-size: 0.92rem;
+            background: #f3f0ec;
+            padding: 0.9rem 1.2rem;
+            border-radius: 6px;
+        }
+
+        .link-inline {
+            color: #1f3a4d;
+            text-decoration: underline;
+            text-underline-offset: 0.12em;
+            text-decoration-color: #c7bfb5;
+            font-weight: 400;
+            transition: text-decoration-color 0.2s ease;
+        }
+
+        .link-inline:hover {
+            text-decoration-color: #1f3a4d;
+        }
+
+        .section-dividers {
+            margin: 3.5rem 0;
+        }
+
+        hr {
+            border: 0;
+            border-top: 1px solid #ede7e1;
+            margin: 0.5rem 0;
+        }
+
+        .footer-note {
+            margin-top: 3rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid #e5ddd5;
+            font-size: 0.9rem;
+            color: #7c7c7c;
+        }
+
+        .footer-note a {
+            color: #3b5c72;
+            text-decoration: underline;
+            text-underline-offset: 0.1em;
+            text-decoration-color: #c7bfb5;
+        }
+
+        .footer-note a:hover {
+            text-decoration-color: #3b5c72;
+        }
+
+        @media (max-width: 480px) {
+            body {
+                padding: 1.2rem 0.8rem;
+            }
+
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+
+            .card-slim {
+                padding: 1.2rem 1rem;
+            }
+
+            h2 {
+                font-size: 1.3rem;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="page">
+
+    <div class="hero">
+        <p>从资料整理到游戏理解</p>
+        <h1>德州扑克 · 信息索引</h1>
+        <div class="sub">
+            一份围绕规则、术语与常见场景的整理笔记，不追求速成，只希望为感兴趣的人提供一条平实的参考线索。
+        </div>
+    </div>
+
+    <section>
+        <h2>为什么需要一份索引页</h2>
+        <p>德州扑克作为一种广泛参与的策略类纸牌游戏，其规则框架看似简单：每人两张底牌、五张公共牌、比牌型大小。但在实际参与过程中，玩家会频繁遇到位置、底池赔率、范围评估、翻前翻后策略等概念。如果你只是偶尔接触，或刚开始系统了解，往往需要反复查找零散的中文资料。</p>
+        <p>这个页面尝试扮演一个轻量的信息整理入口——把一些常见但容易被忽略的知识节点排列出来，并引导至更完整的说明。如果你刚接触<a href="https://www-dezhou.com" class="link-inline">德州扑克游戏</a>，或许可以先从下面几个切入点看起。</p>
+    </section>
+
+    <section>
+        <h2>整理过的五个基础知识点</h2>
+        <p>以下内容来自对常见教程、术语表与规则说明的归纳，不涉及复杂计算或策略模板，仅作为索引性参考。</p>
+        <ul>
+            <li><strong>手牌分级与起手表</strong> — 不同位置适合不同范围的手牌，早期位置保守，后期可适当放宽。常见的起手表（如 Sklansky 分组）是理解范围的基础。</li>
+            <li><strong>位置的价值</strong> — 庄位（Button）是每轮最后行动的位置，信息最多；盲注位（Blinds）被迫提前投入筹码，需要更谨慎。位置直接影响翻后决策。</li>
+            <li><strong>底池赔率与胜率估算</strong> — 判断是否跟注的核心是比较投入筹码与潜在回报的比例，同时结合听牌胜率。常见的四二法则（outs × 4 / 2）是快速心算的起点。</li>
+            <li><strong>翻牌圈公共牌结构</strong> — 翻牌是否关联性强（比如同花面、顺面、成对面）会大幅改变牌力。干燥的牌面与湿润的牌面，行动逻辑完全不同。</li>
+            <li><strong>下注尺度与意图</strong> — 下注不仅为了价值或诈唬，还涉及控制底池、保护手牌、试探反应。不同尺度的下注对应不同目的，理解意图比记住数字更重要。</li>
+        </ul>
+        <div class="note">
+            每一点背后都可以延伸出大量内容，这里仅作为结构化的索引，帮助你在需要时快速定位方向。
+        </div>
+    </section>
+
+    <section class="card-slim">
+        <h3 style="border:0; padding:0; margin:0 0 0.5rem 0;">几种常见的学习途径</h3>
+        <p>很多人在接触<a href="https://www-dezhou.com" class="link-inline">德州扑克游戏</a>一段时间后，会发现自己对某些环节始终模糊——比如如何计算隐含赔率，或者面对持续下注的正确反应。这时不妨从以下几个角度补充信息：</p>
+        <ul style="margin-top:0.5rem;">
+            <li>阅读规则说明与术语列表（优先中文整理版，减少翻译误差）</li>
+            <li>观看无解说或少量解说的复盘视频，自己先判断行动再对照思路</li>
+            <li>使用简单的概率计算器或翻牌圈模拟工具，建立对赔率和牌力的直觉</li>
+            <li>参与低实时压力环境的练习（如分桌练习、常规桌而非锦标赛）</li>
+        </ul>
+        <p style="margin-top:1rem;">以上建议不保证快速提高，但能帮助你减少因信息分散而产生的困惑。</p>
+    </section>
+
+    <section>
+        <h2>从整理角度的一点提醒</h2>
+        <p>资料整理本身不是目的，而是为了更高效地筛选信息。德州扑克涉及大量策略理论、数学计算与心理博弈，任何单一资料来源都难以覆盖全部场景。建议将不同来源的说明交叉对照，尤其留意那些明确说明适用条件和局限性的文章。</p>
+        <p>如果你希望进一步了解完整的规则细节、术语解释与常见玩法说明，可以将 <a href="https://www-dezhou.com" class="link-inline">德州扑克游戏</a> 作为索引起点之一，结合自己的查阅习惯逐步扩展信息源。</p>
+    </section>
+
+    <div class="section-dividers">
+        <hr>
+    </div>
+
+    <section>
+        <h2>常见疑问摘要</h2>
+        <p>以下三条是整理资料时经常被问到的内容，简略回答附在这里。</p>
+        <ul>
+            <li><strong>牌型大小顺序容易记混怎么办？</strong> 皇家同花顺 > 同花顺 > 四条 > 葫芦 > 同花 > 顺子 > 三条 > 两对 > 一对 > 高牌。重点记住同花、顺子、葫芦三条的上下关系即可。</li>
+            <li><strong>线上与线下规则有显著区别吗？</strong> 基础规则一致，但线上更强调手数管理、多桌与软件界面操作，线下更注重物理读人、动作规范与节奏控制。具体细节建议分别查对应的规则说明。</li>
+            <li><strong>新玩家应该先学什么？</strong> 优先级建议：手牌强度判断 → 位置概念 → 简单的底池赔率计算 → 翻前翻后基本线路。之后逐步接触范围构建与下注策略。</li>
+        </ul>
+        <p style="margin-top:0.8rem;">更多细节与场景说明，建议在了解基础后结合具体牌局复盘来深化理解。</p>
+    </section>
+
+    <div class="footer-note">
+        <p>本页内容仅为信息整理与索引参考，不构成任何形式的策略指导。文中提到的所有概念均有更详细的资料可供延伸阅读。如有错漏或需要补充的内容，欢迎通过相关平台反馈。</p>
+        <p style="margin-top:1rem;">部分术语与规则说明来源于公开规则文档与社区整理，具体规则请以所使用的平台或赛事官方说明为准。</p>
+    </div>
+
+</div>
+</body>
+</html>
