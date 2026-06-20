@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NBA直播 · 再次收藏的理由</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+            background: #f5f9fc;
+            color: #1e2b3a;
+            line-height: 1.7;
+            padding: 2rem 1rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .page {
+            max-width: 760px;
+            width: 100%;
+            background: #ffffff;
+            border-radius: 32px;
+            box-shadow: 0 6px 20px rgba(0, 45, 55, 0.06);
+            padding: 2.2rem 1.8rem;
+            transition: box-shadow 0.2s;
+        }
+
+        @media (min-width: 520px) {
+            .page {
+                padding: 3rem 2.8rem;
+            }
+        }
+
+        /* 蓝绿色点缀 */
+        .accent {
+            color: #1c7c7c;
+        }
+
+        .accent-bg {
+            background: #d6f0ed;
+        }
+
+        h1 {
+            font-size: 2rem;
+            font-weight: 600;
+            letter-spacing: -0.02em;
+            color: #103b3b;
+            line-height: 1.2;
+            margin-bottom: 0.6rem;
+        }
+
+        h1 small {
+            display: block;
+            font-size: 0.85rem;
+            font-weight: 400;
+            color: #4a6a7a;
+            margin-top: 0.25rem;
+            letter-spacing: normal;
+        }
+
+        .guide {
+            font-size: 1.05rem;
+            color: #2c5f5f;
+            background: #e6f4f1;
+            padding: 0.9rem 1.2rem;
+            border-radius: 20px;
+            margin: 1.4rem 0 1.8rem 0;
+            border-left: 4px solid #1c7c7c;
+        }
+
+        .grid-cards {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1.2rem;
+            margin: 2rem 0 1.6rem;
+        }
+
+        @media (min-width: 460px) {
+            .grid-cards {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        .card {
+            background: #f6fbfa;
+            padding: 1.2rem 1.3rem;
+            border-radius: 24px;
+            border: 1px solid #d7e7e4;
+            transition: transform 0.15s, box-shadow 0.15s;
+        }
+
+        .card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 14px rgba(28, 124, 124, 0.08);
+        }
+
+        .card h3 {
+            font-size: 1.1rem;
+            font-weight: 500;
+            color: #0a4949;
+            margin-bottom: 0.3rem;
+            display: flex;
+            align-items: center;
+            gap: 0.3rem;
+        }
+
+        .card p {
+            font-size: 0.95rem;
+            color: #2e4a55;
+            margin-bottom: 0.2rem;
+        }
+
+        .card small {
+            color: #4f6e7a;
+            font-size: 0.8rem;
+        }
+
+        .quote-tip {
+            background: #ecf7f3;
+            padding: 1.2rem 1.5rem;
+            border-radius: 28px;
+            margin: 1.8rem 0;
+            font-style: normal;
+            border: 1px solid #c7dfd9;
+            box-shadow: inset 0 1px 3px rgba(0,0,0,0.02);
+        }
+
+        .quote-tip::before {
+            content: "📌 ";
+            font-size: 1.1rem;
+        }
+
+        .link-sentence {
+            background: #ffffff;
+            padding: 0.3rem 0.6rem;
+            border-radius: 40px;
+            display: inline-block;
+            line-height: 1.8;
+        }
+
+        a:not(.btn) {
+            color: #1c7c7c;
+            text-decoration: none;
+            border-bottom: 1px solid #b2d6d0;
+            font-weight: 500;
+            transition: border-color 0.2s, color 0.2s;
+        }
+
+        a:not(.btn):hover {
+            border-bottom-color: #1c7c7c;
+            color: #0a4f4f;
+        }
+
+        .btn {
+            display: inline-block;
+            background: #1c7c7c;
+            color: #ffffff;
+            font-weight: 500;
+            padding: 0.5rem 1.2rem;
+            border-radius: 40px;
+            text-decoration: none;
+            font-size: 0.95rem;
+            letter-spacing: 0.01em;
+            transition: background 0.2s, transform 0.1s;
+            border: none;
+            cursor: default;
+            line-height: 1.4;
+        }
+
+        .btn:hover {
+            background: #136363;
+            transform: scale(1.01);
+        }
+
+        .faq-mini {
+            margin: 2.4rem 0 1rem;
+            border-top: 1px solid #d9e7e3;
+            padding-top: 1.8rem;
+        }
+
+        .faq-item {
+            margin-bottom: 1.2rem;
+        }
+
+        .faq-item strong {
+            display: block;
+            font-weight: 600;
+            color: #1d4a4a;
+            margin-bottom: 0.2rem;
+        }
+
+        .faq-item p {
+            margin: 0;
+            font-size: 0.95rem;
+        }
+
+        .visit-note {
+            margin-top: 1.6rem;
+            background: #f3faf8;
+            padding: 1rem 1.3rem;
+            border-radius: 28px;
+            font-size: 0.95rem;
+            color: #1d4a4a;
+            border: 1px solid #cbe0db;
+        }
+
+        hr {
+            border: none;
+            border-top: 1px solid #deeae6;
+            margin: 1.6rem 0;
+        }
+
+        .meta {
+            font-size: 0.8rem;
+            color: #5a777f;
+            text-align: right;
+            margin-top: 0.5rem;
+            letter-spacing: 0.02em;
+        }
+    </style>
+</head>
+<body>
+<div class="page">
+    <h1>
+        再次打开的页面
+        <small>NBA直播 · 一个值得记住的地址</small>
+    </h1>
+
+    <div class="guide">
+        如果你曾经收藏过这个站点，或者只是偶然看过一场比赛转播，那么这篇简短说明可以帮你重新建立联系。
+    </div>
+
+    <p style="margin-bottom: 0.8rem;">
+        有时候我们会在浏览器里留下很多标签页，而真正需要时反而不容易找到。对于持续关注篮球赛事的观众来说，
+        保持一个稳定的直播信息源，比每次临时搜索要省心得多。无论是常规赛的关键卡位战，还是季后赛的焦点对决，
+        能够快速进入直播页面，往往意味着不错过开场的几个回合。
+    </p>
+
+    <div class="grid-cards">
+        <div class="card">
+            <h3>📡 赛程覆盖</h3>
+            <p>季前赛、常规赛、附加赛、季后赛及夏季联赛均有指向。</p>
+            <small>每日更新对阵时间及预计首发。</small>
+        </div>
+        <div class="card">
+            <h3>🔖 收藏价值</h3>
+            <p>使用书签或固定标签页后，每次打开直达直播列表。</p>
+            <small>无需二次搜索，尤其适合移动端浏览器。</small>
+        </div>
+        <div class="card">
+            <h3>📱 轻量界面</h3>
+            <p>响应式卡片布局，在手机和电脑上阅读体验一致。</p>
+            <small>数据量适中，加载较快。</small>
+        </div>
+        <div class="card">
+            <h3>🧭 持续可用</h3>
+            <p>域名长期维护，内容来源稳定。</p>
+            <small>建议每隔一段时间确认收藏是否有效。</small>
+        </div>
+    </div>
+
+    <p>
+        除了直接通过浏览器收藏夹访问，也可以把地址记在备忘录或笔记应用里。如果你经常在周末打开赛事直播，
+        不妨将这个页面设为固定标签页。下面这个链接就是主入口——
+    </p>
+
+    <div style="margin: 1.4rem 0 1.6rem; text-align: left;">
+        <span class="link-sentence">
+            → 直接前往 <a href="https://sports-qq-nba.com">NBA直播</a> 查看当前可用场次
+        </span>
+    </div>
+
+    <div class="quote-tip">
+        提示：如果你发现某场比赛链接无效或显示异常，多数情况是因为版权方调整了直播源。请耐心等待几小时或次日再试，通常赛前会恢复。
+    </div>
+
+    <p>
+        有经验的观众通常会在赛季开始前就确定两三个备选入口，而这里目前仍然是一个稳定的选择。
+        和很多临时直播页不同，这个站点一直保持了相对简洁的结构，没有过多的弹窗和重定向。
+        这也是为什么我们建议你在需要时优先考虑它——特别是当你用移动设备快速打开的时候。
+    </p>
+
+    <div class="faq-mini">
+        <div class="faq-item">
+            <strong>❓ 为什么适合再次收藏？</strong>
+            <p>因为不需要注册、不需要下载额外应用，只要保持网络通畅，打开 <a href="https://sports-qq-nba.com">NBA直播</a> 即可看到当天的比赛列表。页面结构长期稳定，不容易迷路。</p>
+        </div>
+        <div class="faq-item">
+            <strong>📌 如何保证下次快速找到？</strong>
+            <p>在 Safari 或 Chrome 中点击「添加到主屏幕」（iOS）或「创建快捷方式」（Android）。桌面浏览器可直接拖拽标签页到书签栏。</p>
+        </div>
+        <div class="faq-item" style="margin-bottom: 0;">
+            <strong>🔄 如果页面改版了怎么办？</strong>
+            <p>目前该域名保持一致的视觉风格，如果将来有调整，一般会在页面顶部留下说明。收藏夹里的地址通常不会变。</p>
+        </div>
+    </div>
+
+    <hr>
+
+    <div class="visit-note">
+        <span style="font-weight:500;">访问句 · 写给再次回来的你</span><br>
+        不论是赛季初的试探，还是季后赛的紧张时刻，一个可靠的直播页面值得被记住。<br>
+        <span style="display:inline-block; margin-top: 0.5rem;">→ 保存这个地址：<a href="https://sports-qq-nba.com">NBA直播</a>，下次直接从收藏夹打开即可。</span>
+    </div>
+
+    <div class="meta">
+        · 页面更新于近期 ·
+    </div>
+</div>
+</body>
+</html>
